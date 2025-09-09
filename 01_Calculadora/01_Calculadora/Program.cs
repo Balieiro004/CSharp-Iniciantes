@@ -56,6 +56,8 @@ namespace _01_Calculadora
                 Console.WriteLine("2 - Subtrair");
                 Console.WriteLine("3 - Multiplicar");
                 Console.WriteLine("4 - Dividir");
+                Console.WriteLine("5 - Resto da divisão");
+                Console.WriteLine("6 - Expoente");
                 Console.WriteLine("0 - Sair");
 
                 Console.Write("Selecione uma opção: ");
@@ -103,6 +105,21 @@ namespace _01_Calculadora
                         }
                         Console.WriteLine($"Resultado: {valor1 / valor2}");
                         break;
+                    case 5:
+                        Console.Write("Valor 1: ");
+                        valor1 = double.Parse(Console.ReadLine());
+                        Console.Write("Valor 2: ");
+                        valor2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine($"Resultado: {valor1 % valor2}");
+                        break;
+                    case 6:
+                        Console.Write("Valor 1: ");
+                        valor1 = double.Parse(Console.ReadLine());
+                        Console.Write("Valor 2: ");
+                        valor2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine($"Resultado: {Math.Pow(valor1, valor2)}");
+                        break;
+
                     default:
                         break;
                 }
